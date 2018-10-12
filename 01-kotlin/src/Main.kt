@@ -64,7 +64,70 @@ fun main(args: Array<String>){
 
     val kevin = Usuario("Kevin", "Canacuan", "PASQUEL")
     println(kevin)
+
+
+
+    println(BaseDeDatos.Usuarios)
+    BaseDeDatos.agregarUsuario("Kevin")
+    println(BaseDeDatos.Usuarios)
+
 }
+
+
+
+// -----------------------------------------------------------
+
+//En kotlin no hay "static"
+class BaseDeDatos {
+
+    //companion object  -->
+    companion object {
+        val Usuarios:ArrayList<String> = ArrayList()
+
+        fun agregarUsuario(nombre: String) {
+            Usuarios.add(nombre)
+        }
+
+        //Se pueden agregar más métodos
+    }
+}
+
+// ----------------------------------------------------------
+
+open class Animal(var nombre: String){
+
+}
+
+class Tortuga(nombre: String,
+              var pesoCaparazon: Double): Animal(nombre) {
+    init {
+        println(" $nombre $pesoCaparazon")
+    }
+}
+
+var animal = Animal(nombre = "Caballo")
+var george = Tortuga(nombre = "George", pesoCaparazon = 12.5)
+
+//Por definición todas las clases son "final"; las variables pueden estar definida o ser parámetros
+//"init" --> bloque de código que se ejecuta cuando la clase está lista para ejecutarse
+
+class Ejemlpo {
+    var nombre:String
+    constructor(nNombre:String) {
+        println("estoy en el constructor")
+        nombre = nNombre
+    }
+    init {
+        println("Estoy en el init")
+    }
+}
+
+val ejemlpo = Ejemlpo("Kevin")
+
+
+// -----------------------------------------------------------
+
+
 
 //Kotlin --> ayuda a no tener el error del NullPointException
 // "?" --> la variable puede ser nula
@@ -107,3 +170,7 @@ fun calcularSueldo(bono:Double): Double {
 fun saludar(): Unit {
     println("Hola mundo")
 }
+
+
+
+
