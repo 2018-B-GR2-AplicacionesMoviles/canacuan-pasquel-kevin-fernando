@@ -24,7 +24,7 @@ fun main(args: Array<String>?){
 }
 
 fun menuComprador(): Int {
-    println("\nBIENBENIDO A LA APLICACION DE COMPRAS")
+    println("\n\nBIENVENIDO A LA APLICACION DE COMPRAS")
     println("1. Ingresar nuevo usuario")
     println("2. Realizar una compra")
     println("3. Salir");
@@ -50,13 +50,13 @@ fun realizarCompra(){
 
     print("\nIngrese el ID del producto que desea adquirir: ")
     val idProducto = Integer.parseInt(readLine()!!)
-    print("\nIngrese la cantidad: ")
+    print("Ingrese la cantidad: ")
     val cantidadProducto = Integer.parseInt(readLine()!!)
 
     if(idProducto == 1) print(comprar(1, cantidadProducto))
     else if (idProducto == 2) print(comprar(2, cantidadProducto))
     else if (idProducto == 3) print(comprar(3, cantidadProducto))
-    else print("...Producto no existe...")
+    else print("...Producto no existe...\n")
     main(null)
 }
 
