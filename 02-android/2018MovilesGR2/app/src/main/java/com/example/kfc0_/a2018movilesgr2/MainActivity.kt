@@ -30,7 +30,12 @@ class MainActivity : AppCompatActivity() {
     fun irAPantallaDeBotones() {
         //INTENT -> Moverse de una pantalla a otra
         val intentIrABotones = Intent(this, ButtonActivity::class.java)
+        intentIrABotones.putExtra("nombre", "Kevin")
+        intentIrABotones.putExtra("apellido", "Canacuan")
         this.startActivity(intentIrABotones)
+
+
+        //parcelable
 
         //DEBER para de hoy en 8
 
