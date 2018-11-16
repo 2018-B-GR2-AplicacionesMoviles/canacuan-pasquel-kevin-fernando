@@ -25,6 +25,11 @@ class MainActivity : AppCompatActivity() {
             Log.e("navegacion","HOLA")
             Log.v("navegacion","HOLA") */
         }
+
+        //INTENT DE RESPUESTA
+        boton_respuesta.setOnClickListener{
+            this.irAPantallaDelIntentRespuesta()
+        }
     }
 
     fun irAPantallaDeBotones() {
@@ -38,6 +43,15 @@ class MainActivity : AppCompatActivity() {
         //parcelable
 
         //DEBER para de hoy en 8
+
+    }
+
+
+    //INTENT DE RESPUESTA
+    fun irAPantallaDelIntentRespuesta() {
+        //INTENT -> Moverse de una pantalla a otra
+        val intentRespuesta = Intent(this, IntentRespuestaActivity::class.java)
+        this.startActivity(intentRespuesta)
 
     }
 }
