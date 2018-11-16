@@ -14,11 +14,31 @@ class MainActivity : AppCompatActivity() {
         main_btn_registrarse.setOnClickListener {
             irAPantallaDeRegistro()
         }
+
+        main_btn_salir.setOnClickListener {
+            salir()
+        }
+
+        main_btn_comprar.setOnClickListener {
+            irAPantallacomprar()
+        }
     }
 
     fun irAPantallaDeRegistro() {
         //INTENT
         val intentIrRegistro = Intent(this, RegistroUsuario::class.java)
         this.startActivity(intentIrRegistro)
+    }
+
+    fun irAPantallacomprar() {
+        //INTENT
+        val intentIrAComprar = Intent(this, ComprarActivity::class.java)
+        this.startActivity(intentIrAComprar)
+    }
+
+
+    fun salir() {
+        //SALIR APP
+        this.finish()
     }
 }
