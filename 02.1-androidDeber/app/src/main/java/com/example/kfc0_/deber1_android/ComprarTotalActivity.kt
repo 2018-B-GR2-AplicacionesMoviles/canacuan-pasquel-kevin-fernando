@@ -19,6 +19,7 @@ class ComprarTotalActivity : AppCompatActivity() {
     fun irAMain() {
         //INTENT
         val intentMain = Intent(this, MainActivity::class.java)
+        //this.finish()
         this.startActivity(intentMain)
     }
 
