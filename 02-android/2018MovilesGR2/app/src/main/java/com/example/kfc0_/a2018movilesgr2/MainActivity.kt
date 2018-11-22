@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import kotlinx.android.synthetic.main.activity_main.*
+import java.util.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -34,6 +35,33 @@ class MainActivity : AppCompatActivity() {
         button_ciclo_vida.setOnClickListener {
             this.irAPantallaCicloVida()
         }
+
+
+        //Parcelable -> enviar una clase en un intent
+        button_intent_parcelable.setOnClickListener {
+            this.irActividadParceleableIntent()
+        }
+
+        //Listener del Boton Adaptador
+        button_adaptador.setOnClickListener {
+            this.irActividadAdaptador()
+        }
+    }
+
+    //Funcion Adaptador
+    fun irActividadAdaptador () {
+        val intentActividadAdaptador = Intent(this, AdaptadorActivity::class.java)
+        this.startActivity(intentActividadAdaptador)
+    }
+
+    //Funcion intent con clases
+    fun irActividadParceleableIntent() {
+        val intentActividadIntent = Intent(this, ParcelableActivity::class.java)
+        val kevin = Usuario("Kevin", 23, Date(1994,12,29),50.25)
+        val cachetes = Mascota("Cachetes", kevin)
+        intentActividadIntent.putExtra("usuario", kevin)
+        intentActividadIntent.putExtra("mascota", cachetes)
+        this.startActivity(intentActividadIntent)
     }
 
     fun irAPantallaCicloVida() {
