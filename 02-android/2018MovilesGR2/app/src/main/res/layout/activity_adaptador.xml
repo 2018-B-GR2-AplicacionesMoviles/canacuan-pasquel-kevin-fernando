@@ -16,4 +16,95 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/listView_nombres"
+        android:layout_width="268dp"
+        android:layout_height="146dp"
+        android:layout_marginTop="120dp"
+        app:layout_constraintEnd_toEndOf="@+id/spinner_usuarios"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/spinner_usuarios"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_usuarios" />
+
+    <TextView
+        android:id="@+id/textView_trabajoEnClase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="150dp"
+        android:text="Seleccione un Nombre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_usuarios" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout_vertical"
+        android:layout_width="168dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listView_nombres">
+
+        <TextView
+            android:id="@+id/textView_linearLayout1_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+
+        <Button
+            android:id="@+id/button_linearLayout_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LL - VERTICAL"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/textView_linearLayout2_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_horizontal"
+        android:layout_width="172dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listView_nombres">
+
+        <TextView
+            android:id="@+id/textView_linearLayout1_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TextView" />
+
+        <Button
+            android:id="@+id/button_linearLayout_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="LL - Horizontal"
+            android:textSize="8sp" />
+
+        <TextView
+            android:id="@+id/textView_linearLayout2_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TextView" />
+
+    </LinearLayout>
+
 </android.support.constraint.ConstraintLayout>

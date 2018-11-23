@@ -58,5 +58,37 @@ class AdaptadorActivity : AppCompatActivity() {
                         Log.i("adaptador", "${parent}")
                     }
                 }
+
+        //TRABAJO EN CLASE
+        val adaptadorListViewUsuarios = ArrayAdapter<Usuario>(this, android.R.layout.simple_expandable_list_item_1, arregloUsuarios)
+        listView_nombres.adapter = adaptadorListViewUsuarios
+
+        listView_nombres
+                .onItemClickListener =
+                object : AdapterView.OnItemClickListener {
+                    override fun onItemClick(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                        Log.i("adaptador_deber", "${parent}")
+                        Log.i("adaptador_deber", "${view}")
+                        Log.i("adaptador_deber", "${position}")
+                        Log.i("adaptador_deber", "${id}")
+
+                        val usuario = arregloUsuarios[position]
+                        Log.i("adaptador_deber", "${usuario.nombre}")
+                        textView_trabajoEnClase.setText("${usuario.nombre}")
+
+                        //edad, nombre, sueldo
+
+                        textView_linearLayout1_vertical.setText("${usuario.edad}")
+                        button_linearLayout_vertical.setText("${usuario.nombre}")
+                        textView_linearLayout2_vertical.setText("${usuario.sueldo}")
+
+                        textView_linearLayout1_horizontal.setText("${usuario.edad}")
+                        button_linearLayout_horizontal.setText("${usuario.nombre}")
+                        textView_linearLayout2_horizontal.setText("${usuario.sueldo}")
+
+                    }
+
+                }
+
     }
 }
