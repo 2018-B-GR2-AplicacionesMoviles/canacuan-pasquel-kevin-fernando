@@ -72,6 +72,8 @@ class AdaptadorActivity : AppCompatActivity() {
                         Log.i("adaptador_deber", "${position}")
                         Log.i("adaptador_deber", "${id}")
 
+                        Log
+
                         val usuario = arregloUsuarios[position]
                         Log.i("adaptador_deber", "${usuario.nombre}")
                         textView_trabajoEnClase.setText("${usuario.nombre}")
