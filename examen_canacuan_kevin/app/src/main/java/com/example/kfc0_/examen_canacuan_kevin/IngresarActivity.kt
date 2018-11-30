@@ -1,5 +1,6 @@
 package com.example.kfc0_.examen_canacuan_kevin
 
+import android.app.Activity
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -26,7 +27,18 @@ class IngresarActivity : AppCompatActivity() {
         val cantidad = textView_cantidad.text
         val tipo = textView_tipo.text
 
-        val intentGuardar = Intent()
+        val productos = Productos(
+            nombre.toString(),Integer.parseInt(precio.toString()),Integer.parseInt(cantidad.toString()), tipo.toString()
+        )
+        
+        val intentGuardar = Intent(this, GuardarDatosActivity::class.java)
+        intentGuardar.putExtra("nombre", nombre)
+        intentGuardar.putExtra("precio", precio)
+        intentGuardar.putExtra("cantidad", cantidad)
+        intentGuardar.putExtra("tipo", tipo)
+
+        this.setResult(Activity.RESULT_OK, intentGuardar)
+        this.finish()
 
     }
 

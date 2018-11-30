@@ -20,6 +20,8 @@
         </activity>
         <activity android:name=".ListarActivity">
         </activity>
+        <activity android:name=".GuardarDatosActivity">
+        </activity>
     </application>
 
 </manifest>
